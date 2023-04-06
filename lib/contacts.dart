@@ -123,7 +123,7 @@ class contacts extends StatelessWidget {
           ),
         ),
         Container(
-          height: 205,
+          height: 153,
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("images/map.jpeg"), fit: BoxFit.fitWidth),

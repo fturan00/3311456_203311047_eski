@@ -21,7 +21,7 @@ class _buyingState extends State<buying> {
                 tag: widget.image,
                 child: Container(
                   width: double.infinity,
-                  height: 470,
+                  height: 425,
                   decoration: BoxDecoration(
                     borderRadius: new BorderRadius.only(
                       bottomLeft: Radius.circular(30),
@@ -160,7 +160,7 @@ class _buyingState extends State<buying> {
                       Row(
                         children: [
                           SizedBox(
-                            width: 10,
+                            width: 60,
                           ),
                           IconButton(
                             onPressed: () {

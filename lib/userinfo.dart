@@ -163,22 +163,18 @@ class _userinfoState extends State<userinfo> {
           SizedBox(
             height: 15,
           ),
-          Container(
-            height: 250,
-            width: 370,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/solanahtar.png'),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
+          
           Row(
             children: [
-              SizedBox(
-                width: 190,
+
+              Container(
+                height: 250,
+                width: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/solanahtar.png'),
+                  ),
+                ),
               ),
               ElevatedButton.icon(
                 onPressed: () async {
@@ -216,6 +212,17 @@ class _userinfoState extends State<userinfo> {
                       borderRadius: new BorderRadius.circular(12)),
                 ),
               ),
+            ],
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 190,
+              ),
+              
             ],
           ),
           SizedBox(
