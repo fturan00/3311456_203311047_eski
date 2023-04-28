@@ -21,7 +21,7 @@ import 'instrumentscreens/buyingguitar.dart';
 import 'instrumentscreens/buyingsaks.dart';
 import 'instrumentscreens/buyingvio.dart';
 import 'loginpage.dart';
-import 'model.dart';
+import 'models/model.dart';
 import 'saved.dart';
 import 'package:rive/rive.dart';
 
@@ -111,6 +111,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             height: 80,
             width: double.infinity,
+             
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -156,32 +157,36 @@ class _HomePageState extends State<HomePage> {
   }
 
   kategoriListesi(String s, final Widget nextPage) {
-    return Column(
-      children: [
-        InkWell(
-          onTap: () {
-            Navigator.push(
-                context as BuildContext, MaterialPageRoute(builder: ((context) => nextPage)));
-          },
-          child: CircleAvatar(
-            radius: 32,
-            backgroundColor: Color.fromARGB(255, 84, 71, 71),
-            child: CircleAvatar(
-              radius: 30,
-              backgroundColor: Colors.black,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  image: DecorationImage(
-                    image: AssetImage(s),
-                    fit: BoxFit.cover,
+    return Builder(
+      builder: (BuildContext context) {
+        return Column(
+          children: [
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: ((context) => nextPage)));
+              },
+              child: CircleAvatar(
+                radius: 32,
+                backgroundColor: Color.fromARGB(255, 84, 71, 71),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.black,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      image: DecorationImage(
+                        image: AssetImage(s),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ),
-      ],
+          ],
+        );
+      }
     );
   }
 }
