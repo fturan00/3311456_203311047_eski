@@ -20,8 +20,9 @@ class _musicscreenState extends State<musicscreen> {
   @override
   void initState() {
     super.initState();
-    music = musicListesi[widget.index]; 
+    music = musicListesi[widget.index];
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 187, 187, 187),

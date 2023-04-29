@@ -3,25 +3,19 @@ import 'dart:html';
 import 'dart:io';
 import 'dart:js';
 import 'dart:ui';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import 'package:like_button/like_button.dart';
 import 'contacts.dart';
 import 'firebase_options.dart';
 import 'graphic.dart';
 import 'instrumentscreens/buying.dart';
-import 'instrumentscreens/buyingakord.dart';
-import 'instrumentscreens/buyingdrum.dart';
-import 'instrumentscreens/buyingguitar.dart';
-import 'instrumentscreens/buyingsaks.dart';
-import 'instrumentscreens/buyingvio.dart';
 import 'loginpage.dart';
 import 'models/model.dart';
 import 'musicscreen.dart';
 import 'saved.dart';
 import 'package:rive/rive.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,9 +41,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,97 +98,136 @@ class _HomePageState extends State<HomePage> {
           Container(
             height: 80,
             width: double.infinity,
-             
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
                 SizedBox(
                   width: 30,
                 ),
-                kategoriListesi('images/elektrogitar.png', musicscreen(index: 0,)),
+                kategoriListesi(
+                    'images/elektrogitar.png',
+                    musicscreen(
+                      index: 0,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/tuşlu.png', musicscreen(index: 1,)),
+                kategoriListesi(
+                    'images/tuşlu.png',
+                    musicscreen(
+                      index: 1,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/üflemeli.png',musicscreen(index: 2,)),
+                kategoriListesi(
+                    'images/üflemeli.png',
+                    musicscreen(
+                      index: 2,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/gitar.png', musicscreen(index: 3,)),
+                kategoriListesi(
+                    'images/gitar.png',
+                    musicscreen(
+                      index: 3,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/vurmalı.png', musicscreen(index: 4,)),
+                kategoriListesi(
+                    'images/vurmalı.png',
+                    musicscreen(
+                      index: 4,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/keman.png', musicscreen(index: 5,)),
+                kategoriListesi(
+                    'images/keman.png',
+                    musicscreen(
+                      index: 5,
+                    )),
                 SizedBox(
                   width: 10,
                 ),
               ],
             ),
           ),
-          cardYapisi(card: cardList[0]),
-          cardYapisi(card: cardList[1]),
-          cardYapisi(card: cardList[2]),
-          cardYapisi(card: cardList[3]),
-          cardYapisi(card: cardList[4]),
-          cardYapisi(card: cardList[5]),
+          cardYapisi(
+            card: cardList[0],
+            index: 0,
+          ),
+          cardYapisi(
+            card: cardList[1],
+            index: 1,
+          ),
+          cardYapisi(
+            card: cardList[2],
+            index: 2,
+          ),
+          cardYapisi(
+            card: cardList[3],
+            index: 3,
+          ),
+          cardYapisi(
+            card: cardList[4],
+            index: 4,
+          ),
+          cardYapisi(
+            card: cardList[5],
+            index: 5,
+          ),
         ],
       ),
     );
   }
 
   kategoriListesi(String s, final Widget nextPage) {
-    return Builder(
-      builder: (BuildContext context) {
-        return Column(
-          children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: ((context) => nextPage)));
-              },
+    return Builder(builder: (BuildContext context) {
+      return Column(
+        children: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: ((context) => nextPage)));
+            },
+            child: CircleAvatar(
+              radius: 32,
+              backgroundColor: Color.fromARGB(255, 84, 71, 71),
               child: CircleAvatar(
-                radius: 32,
-                backgroundColor: Color.fromARGB(255, 84, 71, 71),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.black,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      image: DecorationImage(
-                        image: AssetImage(s),
-                        fit: BoxFit.cover,
-                      ),
+                radius: 30,
+                backgroundColor: Colors.black,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    image: DecorationImage(
+                      image: AssetImage(s),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
             ),
-          ],
-        );
-      }
-    );
+          ),
+        ],
+      );
+    });
   }
 }
 
 class cardYapisi extends StatelessWidget {
   final CardI card;
-  
+  final int index;
+
   const cardYapisi({
     required this.card,
+    required this.index,
   });
 
   @override
-  
   Widget build(BuildContext context) {
-  
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Material(
@@ -205,7 +235,7 @@ class cardYapisi extends StatelessWidget {
         elevation: 10,
         color: Colors.white,
         child: Container(
-          height: 425,
+          height: 440,
           width: 500,
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -234,15 +264,16 @@ class cardYapisi extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: ((context) =>
-                              buying(image: card.enstrumanFoto1))));
+                          builder: ((context) => buying(
+                                image: card.enstrumanFoto1,
+                                index: index,
+                              ))));
                     },
                     child: Hero(
                       tag: card.enstrumanFoto1,
                       child: Container(
                         height: 290,
-                        width:
-                            (MediaQuery.of(context).size.width - 60) / 2,
+                        width: (MediaQuery.of(context).size.width - 60) / 2,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(13),
                             image: DecorationImage(
@@ -260,20 +291,19 @@ class cardYapisi extends StatelessWidget {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => buying(
                                     image: card.enstrumanFoto2,
+                                    index: index,
                                   )));
                         },
                         child: Hero(
                           tag: card.enstrumanFoto2,
                           child: Container(
                             height: 175,
-                            width: (MediaQuery.of(context).size.width -
-                                    100) /
-                                2,
+                            width:
+                                (MediaQuery.of(context).size.width - 100) / 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                  image:
-                                      AssetImage(card.enstrumanFoto2),
+                                  image: AssetImage(card.enstrumanFoto2),
                                   fit: BoxFit.cover),
                             ),
                           ),
@@ -287,20 +317,19 @@ class cardYapisi extends StatelessWidget {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => buying(
                                     image: card.enstrumanFoto3,
+                                    index: index,
                                   )));
                         },
                         child: Hero(
                           tag: card.enstrumanFoto3,
                           child: Container(
                             height: 110,
-                            width: (MediaQuery.of(context).size.width -
-                                    100) /
-                                2,
+                            width:
+                                (MediaQuery.of(context).size.width - 100) / 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                  image:
-                                      AssetImage(card.enstrumanFoto3),
+                                  image: AssetImage(card.enstrumanFoto3),
                                   fit: BoxFit.cover),
                             ),
                           ),
@@ -325,4 +354,3 @@ class cardYapisi extends StatelessWidget {
     );
   }
 }
-

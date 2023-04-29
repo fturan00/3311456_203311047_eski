@@ -163,10 +163,8 @@ class _userinfoState extends State<userinfo> {
           SizedBox(
             height: 15,
           ),
-          
           Row(
             children: [
-
               Container(
                 height: 250,
                 width: 300,
@@ -222,7 +220,6 @@ class _userinfoState extends State<userinfo> {
               SizedBox(
                 width: 190,
               ),
-              
             ],
           ),
           SizedBox(

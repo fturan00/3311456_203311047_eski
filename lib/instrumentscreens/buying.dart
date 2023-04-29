@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/userinfo.dart';
 
+import '../models/buyinstrumentpagemodel.dart';
+
 class buying extends StatefulWidget {
+  final int index;
   var image;
-  buying({this.image});
+  buying({this.image, required this.index});
 
   @override
   State<buying> createState() => _buyingState();
 }
 
 class _buyingState extends State<buying> {
+  List<InstrumentPage> instrumenPageListesi =
+      InstrumentPage.instrumentPageList();
+  late InstrumentPage music;
+
+  @override
+  void initState() {
+    super.initState();
+    music = instrumenPageListesi[widget.index];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +61,7 @@ class _buyingState extends State<buying> {
                         width: 50,
                       ),
                       Text(
-                        "Body:",
+                        music.text1,
                         style: TextStyle(
                             fontFamily: 'CoveredByYourGrace',
                             fontSize: 22,
@@ -56,7 +69,7 @@ class _buyingState extends State<buying> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        "Maple",
+                        music.text2,
                         style: TextStyle(
                           fontFamily: 'Galdeano',
                           fontSize: 15,
@@ -70,7 +83,7 @@ class _buyingState extends State<buying> {
                         width: 50,
                       ),
                       Text(
-                        "Color:",
+                        music.text3,
                         style: TextStyle(
                             fontFamily: 'CoveredByYourGrace',
                             fontSize: 22,
@@ -78,7 +91,7 @@ class _buyingState extends State<buying> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        "Matrix emerald green",
+                        music.text4,
                         style: TextStyle(
                           fontFamily: 'Galdeano',
                           fontSize: 15,
@@ -92,7 +105,7 @@ class _buyingState extends State<buying> {
                         width: 50,
                       ),
                       Text(
-                        "Number of Wires:",
+                        music.text5,
                         style: TextStyle(
                             fontFamily: 'CoveredByYourGrace',
                             fontSize: 22,
@@ -100,7 +113,7 @@ class _buyingState extends State<buying> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        "6",
+                        music.text6,
                         style: TextStyle(
                           fontFamily: 'Galdeano',
                           fontSize: 15,
@@ -114,7 +127,7 @@ class _buyingState extends State<buying> {
                         width: 50,
                       ),
                       Text(
-                        "Length:",
+                        music.text7,
                         style: TextStyle(
                             fontFamily: 'CoveredByYourGrace',
                             fontSize: 22,
@@ -122,7 +135,7 @@ class _buyingState extends State<buying> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        "24.5",
+                        music.text8,
                         style: TextStyle(
                           fontFamily: 'Galdeano',
                           fontSize: 15,
@@ -136,7 +149,7 @@ class _buyingState extends State<buying> {
                         width: 50,
                       ),
                       Text(
-                        "Controls:",
+                        music.text9,
                         style: TextStyle(
                             fontFamily: 'CoveredByYourGrace',
                             fontSize: 22,
@@ -144,7 +157,7 @@ class _buyingState extends State<buying> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        " 2x volume, 1x master tone",
+                        music.text10,
                         style: TextStyle(
                           fontFamily: 'Galdeano',
                           fontSize: 15,
@@ -180,8 +193,8 @@ class _buyingState extends State<buying> {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 65, 194, 69),
-                              Colors.blue,
+                              music.buttoncolor1,
+                              music.buttoncolor2,
                             ],
                             begin: Alignment.bottomRight,
                             end: Alignment.topLeft,
