@@ -5,11 +5,7 @@ import 'dart:js';
 import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/voicescreens/akord.dart';
-import 'package:flutter_application_1/voicescreens/drum.dart';
-import 'package:flutter_application_1/voicescreens/guitar.dart';
-import 'package:flutter_application_1/voicescreens/saks.dart';
-import 'package:flutter_application_1/voicescreens/vio.dart';
+
 import 'package:like_button/like_button.dart';
 import 'contacts.dart';
 import 'firebase_options.dart';
@@ -22,10 +18,10 @@ import 'instrumentscreens/buyingsaks.dart';
 import 'instrumentscreens/buyingvio.dart';
 import 'loginpage.dart';
 import 'models/model.dart';
+import 'musicscreen.dart';
 import 'saved.dart';
 import 'package:rive/rive.dart';
 
-import 'voicescreens/electro.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -118,27 +114,27 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 30,
                 ),
-                kategoriListesi('images/elektrogitar.png', electro()),
+                kategoriListesi('images/elektrogitar.png', musicscreen(index: 0,)),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/tuşlu.png', akord()),
+                kategoriListesi('images/tuşlu.png', musicscreen(index: 1,)),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/üflemeli.png', saks()),
+                kategoriListesi('images/üflemeli.png',musicscreen(index: 2,)),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/gitar.png', guitar()),
+                kategoriListesi('images/gitar.png', musicscreen(index: 3,)),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/vurmalı.png', drum()),
+                kategoriListesi('images/vurmalı.png', musicscreen(index: 4,)),
                 SizedBox(
                   width: 10,
                 ),
-                kategoriListesi('images/keman.png', vio()),
+                kategoriListesi('images/keman.png', musicscreen(index: 5,)),
                 SizedBox(
                   width: 10,
                 ),

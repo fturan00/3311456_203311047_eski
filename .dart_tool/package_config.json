@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_flutterfire_internals",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.1.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "archive",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.6",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -51,19 +51,19 @@
     },
     {
       "name": "cloud_firestore",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.5.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.5.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "cloud_firestore_platform_interface",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-5.12.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-5.12.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "cloud_firestore_web",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.4.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -111,25 +111,25 @@
     },
     {
       "name": "firebase_auth",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.4.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_auth_platform_interface",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-6.13.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-6.13.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_auth_web",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.3.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_core",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.9.0",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -213,7 +213,7 @@
     },
     {
       "name": "lottie",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/lottie-2.3.1",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/lottie-2.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -249,15 +249,15 @@
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.0.24",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.0.27",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.2.1",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
@@ -273,7 +273,7 @@
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.1.5",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -297,7 +297,7 @@
     },
     {
       "name": "pointycastle",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.2",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.3",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -309,7 +309,7 @@
     },
     {
       "name": "rive",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.10.3",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.10.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -387,7 +387,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/win32-3.1.3",
+      "rootUri": "file:///C:/Users/tfurk/AppData/Local/Pub/Cache/hosted/pub.dev/win32-4.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -404,7 +404,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-05T21:09:08.334513Z",
+  "generated": "2023-04-29T12:34:15.924351Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
